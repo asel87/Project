@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
+.nav__links a {
+  display: inline-block;
+  
+  line-height: 1;
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer;
+}
+.nav__links a:after {
+  background-color:  rgba(128, 171, 128, 0.947); /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  height: 2px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.nav__links a:hover:after,
+.nav__links a:focus:after {
+  width: 100%;
+}
+   
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    color:black;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+   
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+
+  .cta{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
+  .nav__links a,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color:rgba(36, 35, 56, 0.853);
+  }
+  
+  .cta-container {
+    margin-right: -auto; /* Adjust the value as needed */
+}
+
+.cta {
+    padding: 12px 30px;
+    margin: 5px;
+    background-color: rgba(36, 35, 56, 0.853);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+    background-color: rgba(128, 171, 128, 0.947);
+}
+.green-dot{
+  color: rgba(128, 171, 128, 0.947) ;
+
+}
+
+
+.gallery-container {
+  position: absolute;
+  margin: auto;
+  top: 80px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Place items on the right */
+  align-items: center; /* Align them vertically at the center */ /* Add right margin */
+  width: 50%; /* Reduce the container width */
+  height: 100vh; /* Reduce the container height */
+  padding: 10px; /* Add spacing between photos and container edges */
+}
+
+.gallery-container .item {
+  height: 80%; /* Reduce the photo height */
+  margin: 0 10px; /* Increase the space between photos */
+  border-radius: 15px; /* Round the corners of the photo */
+  overflow: hidden; /* Clip the content to not go beyond the rounded corners */
+}
+
+/* Example: Add shadow to highlight photos on hover */
+.gallery-container .item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
